@@ -1,3 +1,5 @@
+package com.taran.introduction;
+
 public class WrapperExample {
     public static void main(String[] args) {
 //        int a = 10;
@@ -18,10 +20,13 @@ public class WrapperExample {
         // when a non primitive is final, you cannot reassign it.
         taran.name = "other name";
 
-        A obj;
-        for (int i = 0; i < 1000000; i++) {
-            obj = new A("Random name");
-        }
+//        com.taran.introduction.A obj;
+//        for (int i = 0; i < 1000000; i++) {
+//            obj = new com.taran.introduction.A("Random name");
+//        }
+
+        A taran2 = new A("Tarandeep");
+        System.out.println(taran2);
     }
 
     static void swap(Integer a, Integer b) {
@@ -41,5 +46,9 @@ class A {
     }
     protected  void finalize() throws Throwable {
         System.out.println("finalize");;
+    }
+    @Override
+    public String toString() {
+        return "Something";
     }
 }
